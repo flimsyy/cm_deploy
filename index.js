@@ -86,7 +86,7 @@ app.delete('/maker/:id', async (req, res) => {
     res.redirect('/maker'); // After deletion, redirect to the character maker page
 });
 
-// Start the Express server on port 8080
+// Start the Express server on port 3000
 app.listen(3000, () => {
-    console.log('Listening on port 8080');
+    console.log('Listening on port 3000');
 });
