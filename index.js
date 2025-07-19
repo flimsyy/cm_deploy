@@ -27,7 +27,6 @@ app.set('views', path.join(__dirname, '/views')); // Use the views directory for
 // Import the Character model
 const Character = require('./models/Character');
 
-//ZMxatyCosxArCfb7
 // Connect to MongoDB using mongoose, handling success and error cases
 mongoose.connect(process.env.URI)
   .then(() => console.log('Connected to MongoDB')) // Log success message if connection works
