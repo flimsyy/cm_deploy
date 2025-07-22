@@ -32,6 +32,12 @@ mongoose.connect(process.env.URI)
   .then(() => console.log('Connected to MongoDB')) // Log success message if connection works
   .catch((err) => console.log('Connection error', err)); // Log error if connection fails
 
+
+app.get('', async (req, res) => {
+    let characters = await Character.find(); // Retrieve all characters from the database
+    res.render('maker', { characters }); // Render the maker view and pass the characters to it
+});
+
 // Route to display all characters on the character maker page
 app.get('/maker', async (req, res) => {
     let characters = await Character.find(); // Retrieve all characters from the database
